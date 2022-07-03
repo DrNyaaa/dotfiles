@@ -1,0 +1,96 @@
+
+super+t
+	exec alacritty
+
+super + q
+	i3-msg kill window
+
+#Screenshots
+Print 
+	maim "/home/$USER/Pictures/Screenshots/$(date)"
+
+alt+Print 
+	maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/$(date)"
+
+shift+Print 
+	maim --select "/home/$USER/Pictures/Screenshots/$(date)"
+
+ctrl+Print 
+	maim | xclip -selection clipboard -t image/png
+
+ctrl+super+Print
+	maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+
+ctrl+shift+Print
+	maim -s | xclip -selection clipboard -t image/png	
+
+#Workspace stuff
+super + shift + {1-9,0}
+	i3-msg move container to workspace {1-9,10}
+
+super + {1-9,0}
+	i3-msg workspace {1-9,10}
+
+
+#Change Window Focus
+super + Up
+	i3-msg focus up || i3-msg focus output up
+super + Down
+	i3-msg focus down || i3-msg focus output down
+super + Left
+	i3-msg focus left || i3-msg focus output left
+super + Right
+	i3-msg focus right || i3-msg focus output right
+
+super + shift + Up
+	i3-msg move up
+
+super + shift + Down
+	i3-msg move down
+
+super + shift + Left
+	i3-msg move left
+
+super + shift + Right
+	i3-msg move right
+
+super+f
+        i3-msg fullscreen
+
+super + ctrl + f
+	i3-msg floating toggle
+
+#rofi
+
+super+z
+	/home/ishanpc/.config/rofi/launchers/text/launcher.sh
+
+alt+ctrl+g
+	/home/ishanpc/.config/rofi/scripts/rofi-wrapper.sh games
+
+
+alt+ctrl+q
+	/home/ishanpc/.config/rofi/applets/android/powermenu
+
+
+alt+ctrl+n
+	/home/ishanpc/.config/rofi/applets/android/quicklinks.sh
+
+alt+ctrl+b
+	rofi-bluetooth
+
+#Audio
+alt+ctrl+1
+	playerctl --player spotifyd play-pause
+
+alt+ctrl+2
+	mpc toggle
+
+F4
+	pactl set-sink-volume 0 -10%
+
+F5
+	pactl set-sink-volume 0 +10%
+
+Prior
+	echo DONE
