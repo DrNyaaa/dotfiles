@@ -26,4 +26,5 @@ Screenshots
 
 -----
 terminal font - FantasqueSansMono Nerd Font
+
 polybar font - Terminus
