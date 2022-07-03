@@ -24,3 +24,6 @@ Screenshots
 
 ![test_000](https://user-images.githubusercontent.com/99406142/177039006-1c7710e9-b86c-4ecd-90f0-2d37b207acee.png)
 
+-----
+terminal font - FantasqueSansMono Nerd Font
+polybar font - Terminus
